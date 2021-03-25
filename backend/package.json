@@ -6,6 +6,13 @@
     "license": "MIT",
     "author": "Microsoft",
     "scripts": {
-        "start": "node index.js"
+        "start": "node index.js",
+        "dev": "nodemon index.js localhost 3080"
+    },
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.7"
     }
 }

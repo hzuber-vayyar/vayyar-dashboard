@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/f5741fa1-5cec-4b25-959a-f64fae4dd547/resourceGroups/hannah_sandbox/providers/Microsoft.Web/sites/vayyar-dashboard",
+    "appService.deploySubpath": "."
+}
