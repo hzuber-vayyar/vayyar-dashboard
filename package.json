@@ -10,7 +10,10 @@
         "dev": "nodemon index.js localhost 3080"
     },
     "dependencies": {
-        "express": "^4.17.1"
+        "azure": "^2.3.1-preview",
+        "azure-arm-resource": "^7.4.0",
+        "express": "^4.17.1",
+        "ms-rest-azure": "^3.0.0"
     },
     "devDependencies": {
         "nodemon": "^2.0.7"
