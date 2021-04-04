@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const cors = require("cors")
+app.use(cors())
 const port = process.env.PORT || 3080;
 
 const users = [
@@ -14,6 +16,7 @@ app.get("/api/", (req, res) => {
 
 app.get("/api/users", (req, res) => {
   console.log("/users called!");
+  console.log(res)
   res.json(users);
 });
 
