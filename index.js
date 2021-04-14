@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const cors = require("cors")
 app.use(cors())
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
 const port = process.env.PORT || 3080;
 
 const users = [
@@ -21,13 +23,21 @@ app.get("/api/users", (req, res) => {
 });
 
 app.post('/api/user', function (req, res) {
-  console.log("body is ", req.body)
   const user = req.body;
   console.log('Adding user:::::', user);
   users.push(user);
   console.log("all users: ", users)
-  res.json("user added");
+  res.json(user);
 });
+
+app.use((err,req,res,next)=>{
+  // because err.status is undefined 
+   res.status(404).json({
+       error : {
+           message : err.message
+      }
+   });
+})
 
 app.listen(port, () => {
   console.log(`Vayyar node app listening at http://localhost:${port}`);
